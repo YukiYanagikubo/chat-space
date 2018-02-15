@@ -13,12 +13,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|index: true, null: false, unique: true|
+|name|string|index: true, null: false, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 
 ### Association
-- belongs_to :member
+- has_many :member
 - has_many :messages
 
 ## messagesテーブル
@@ -38,8 +38,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :members
-- has_many :messasges
+- has_many :messages
