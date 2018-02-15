@@ -1,0 +1,11 @@
+\!!!
+\%html
+\%head
+\%meta{:content =&gt; "text/html; charset=UTF-8", "http-equiv" =&gt; "Content-Type"}/
+\%title ChatSpace
+\= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' =&gt; true
+\= javascript_include_tag 'application', 'data-turbolinks-track' =&gt; true
+\= csrf_meta_tags
+\%body
+\= render partial: 'layouts/flash'
+\= yield
