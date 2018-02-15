@@ -18,7 +18,7 @@
 |password|string|null: false|
 
 ### Association
-- has_many :member
+- has_many :members
 - has_many :messages
 
 ## messagesテーブル
