@@ -1,10 +1,13 @@
 .left-contents
   .left-contents__user
-    .left-contents__user__content
-      .left-contents__user__content__name
-        name
-      %a.left-contents__user__content__bt1
-      %a.left-contents__user__content__bt2
+    .left-contents__user__content__name
+      name
+    .left-contents__user__content__bt1
+      = link_to root_path do
+        %i.fa.fa-cog
+    .left-contents__user__content__bt2
+      = link_to root_path do
+        %i.fa.fa-pencil-square-o
   .left-contents__groups
     .left-contents__groups__group
     .left-contents__groups__group

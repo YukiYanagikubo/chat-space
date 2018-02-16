@@ -7,7 +7,25 @@
       height: 15%;
       background-color: #253141;
       position: relative;
-    }
+        .left-contents__user__content__name{
+          font-size: 16px;
+          font-weight: bold;
+          color: #FFFFFF;
+          float: left;
+          padding: 50px 10px;
+          display: inline-block;
+        }
+        .left-contents__user__content__bt1{
+          color: #FFFFFF;
+          float: right;
+          padding: 50px 70px 0 0;
+        }
+        .left-contents__user__content__bt2{
+          color: #FFFFFF;
+          float: right;
+          padding-top: 50px;
+        }
+      }
     .left-contents__groups{
       background-color: #2f3e51;
       height: 85%;
