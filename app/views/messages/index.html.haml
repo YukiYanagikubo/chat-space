@@ -23,6 +23,13 @@
     .main-contents__header__members
       メンバー
   .main-contents__body
-    .main-contents__message
-    .main-contents__message
+    .main-contents__body__message
+      .main-contents__body__message__name
+        name
+      .main-contents__body__message__data
+        data
+      .main-contents__body__message__body
+        message
   .main-contents__footer
+    %input.message{:name => "message", :placeholder => "type a message", :type => "text"}/
+    %input.submit{:name => "commit", :type => "submit", :value => "Send"}/
