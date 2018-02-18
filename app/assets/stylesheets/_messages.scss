@@ -9,11 +9,11 @@
   width: 300px;
   height: 100vh;
   float: left;
-    .left-contents__user{
+    &__user{
       height: 15%;
       background-color: #253141;
       position: relative;
-        .left-contents__user__content__name{
+        &__name{
           font-size: 16px;
           font-weight: bold;
           color: #FFFFFF;
@@ -21,14 +21,14 @@
           padding: 50px 20px;
           display: inline-block;
         }
-        .left-contents__user__content__bt1{
+        &__bt1{
           float: right;
           padding: 50px 70px 0 0;
             i.fa{
               color: white;
             }
         }
-        .left-contents__user__content__bt2{
+        &__bt2{
           float: right;
           padding-top: 50px;
             i.fa{
@@ -36,18 +36,18 @@
             }
         }
       }
-    .left-contents__groups{
+    &__groups{
       background-color: #2f3e51;
       height: 85%;
-        .left-contents__groups__group{
+        &__group{
           height: 80px;
           padding: 20px 20px 0 20px;
-            .left-contents__groups__group__name{
+            &__name{
               color: #FFFFFF;
               font-size: 15px;
               padding-bottom: 5px;
             }
-            .left-contents__groups__group__message{
+            &__message{
               color: #FFFFFF;
               font-size: 11px;
             }
@@ -59,15 +59,15 @@
   width: calc(100vw - 300px);
   height: 100vh;
   float: right;
-    .main-contents__header{
+    &__header{
       height: 15%;
       position: relative;
       border-bottom: solid 1px #eee;
-        .main-contents__header__group{
+        &__group{
           padding: 35px 0 15px 40px;
           font-size: 20px;
           color: #333333;
-            .main-contents__header__edit{
+            &__edit{
               margin: -10px 40px 0 0;
               border: solid 1px #38AEF0;
               color: #38AEF0;
@@ -76,35 +76,35 @@
               font-size: 15px;
             }
           }
-          .main-contents__header__members{
+          &__members{
             padding: 0 0 46px 40px;
             font-size: 12px;
             color: #999999;
             display: inline-block;
           }
     }
-    .main-contents__body{
+    &__body{
       height: calc(85% - 90px);
-        .main-contents__body__list{
+        &__list{
           padding-top: 26px;
           padding-left: 40px;
-            .main-contents__body__list__message{
+            &__message{
               height: 80px;
               padding: 20px 40px 0px 0px;
-                .main-contents__body__list__message__name{
+                &__name{
                   display: inline-block;
                   color: #333333;
                   font-size: 16px;
                   float: left;
                 }
-                .main-contents__body__list__message__data{
+                &__data{
                   display: inline-block;
                   color: #999999;
                   font-size: 12px;
                   padding: 0 10px 10px;
                   float: left;
                 }
-                .main-contents__body__list__message__body{
+                &__body{
                   font-size: 14px;
                   color: #434A54;
                   clear: both;
@@ -112,7 +112,7 @@
            }
         }
     }
-    .main-contents__footer{
+    &__footer{
       height: 90px;
       background-color: #B8C3C7;
       clear: both;
@@ -124,13 +124,19 @@
           height:50px;
           padding-left: 10px;
         }
+        input#message_image.image{
+          position: absolute;
+          display: none;
+        }
         .submit{
           color: #FFFFFF;
           background-color: #38AEF0;
           width: 7%;
           height: 50px;
           padding: 0 10px;
+          margin-top: 20px;
           margin-left: 15px;
+          position: absolute;
         }
     }
 }
