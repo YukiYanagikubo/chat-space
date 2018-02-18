@@ -1,3 +1,9 @@
+.header-message{
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #00A070;
+}
 .left-contents{
   background-color: #2f3e51;
   width: 300px;
@@ -12,18 +18,22 @@
           font-weight: bold;
           color: #FFFFFF;
           float: left;
-          padding: 50px 10px;
+          padding: 50px 20px;
           display: inline-block;
         }
         .left-contents__user__content__bt1{
-          color: #FFFFFF;
           float: right;
           padding: 50px 70px 0 0;
+            i.fa{
+              color: white;
+            }
         }
         .left-contents__user__content__bt2{
-          color: #FFFFFF;
           float: right;
           padding-top: 50px;
+            i.fa{
+              color: white;
+            }
         }
       }
     .left-contents__groups{
@@ -31,7 +41,7 @@
       height: 85%;
         .left-contents__groups__group{
           height: 80px;
-          padding: 20px;
+          padding: 20px 20px 0 20px;
             .left-contents__groups__group__name{
               color: #FFFFFF;
               font-size: 15px;
@@ -75,25 +85,31 @@
     }
     .main-contents__body{
       height: calc(85% - 90px);
-        .main-contents__body__message{
-          height: 100px;
-          padding: 46px 40px 0px 40px;
-            .main-contents__body__message__name{
-              display: inline-block;
-              padding-right: 10px;
-              color: #333333;
-              font-size: 16px;
-            }
-            .main-contents__body__message__data{
-              display: inline-block;
-              color: #999999;
-              font-size: 12px;
-            }
-            .main-contents__body__message__body{
-              font-size: 14px;
-              color: #434A54;
-
-            }
+        .main-contents__body__list{
+          padding-top: 26px;
+          padding-left: 40px;
+            .main-contents__body__list__message{
+              height: 80px;
+              padding: 20px 40px 0px 0px;
+                .main-contents__body__list__message__name{
+                  display: inline-block;
+                  color: #333333;
+                  font-size: 16px;
+                  float: left;
+                }
+                .main-contents__body__list__message__data{
+                  display: inline-block;
+                  color: #999999;
+                  font-size: 12px;
+                  padding: 0 10px 10px;
+                  float: left;
+                }
+                .main-contents__body__list__message__body{
+                  font-size: 14px;
+                  color: #434A54;
+                  clear: both;
+                }
+           }
         }
     }
     .main-contents__footer{
@@ -106,12 +122,15 @@
           margin: 20px 10px 20px 40px;
           width:80%;
           height:50px;
+          padding-left: 10px;
         }
         .submit{
           color: #FFFFFF;
           background-color: #38AEF0;
           width: 7%;
           height: 50px;
+          padding: 0 10px;
+          margin-left: 15px;
         }
     }
 }
