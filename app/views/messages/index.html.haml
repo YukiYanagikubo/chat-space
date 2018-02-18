@@ -4,14 +4,12 @@
     .left-contents__user__name
       name
     .left-contents__user__bt1
-      = link_to root_path do
+      = link_to "/groups/new" do
         %i.fa.fa-cog
     .left-contents__user__bt2
-      = link_to root_path do
+      = link_to "/users/edit" do
         %i.fa.fa-pencil-square-o
   .left-contents__groups
-    = render partial: "group"
-    = render partial: "group"
     = render partial: "group"
 .main-contents
   .main-contents__header
@@ -24,11 +22,9 @@
   .main-contents__body
     .main-contents__body__list
       =render partial: "message"
-      =render partial: "message"
-      =render partial: "message"
   .main-contents__footer
-    %input.message{:name => "message", :placeholder => "type a message", :type => "text"}/
-    %label.chat-file{:for => "message_image"}
-      %input#message_image.image{:name => "message[image]", :type => "file"}/
+    %input.message{name: "message", placeholder: "type a message", type: "text"}/
+    %label.chat-file{for: "message_image"}
+      %input#message_image.image{name: "message[image]", type: "file"}/
       %i.fa.fa-image
-    %input.submit{:name => "commit", :type => "submit", :value => "Send"}/
+    %input.submit{name: "commit", type: "submit", value: "Send"}/
