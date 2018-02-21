@@ -1,5 +1,7 @@
 .left-contents__groups__group
-  .left-contents__groups__group__name
-    グループの名前
-  .left-contents__groups__group__message
-    メッセージ
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      .left-contents__groups__group__name
+        = group.name
+      .left-contents__groups__group__message
+        メッセージはまだありません
