@@ -7,7 +7,7 @@
       = link_to edit_user_path(current_user) do
         %i.fa.fa-cog
     .left-contents__user__bt2
-      = link_to do  #リンク先は未作成のため省略
+      = link_to new_group_path do
         %i.fa.fa-pencil-square-o
   .left-contents__groups
     = render partial: "group"
