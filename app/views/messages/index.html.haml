@@ -21,10 +21,12 @@
       メンバー
   .main-contents__body
     .main-contents__body__list
-      =render partial: "message"
+      = render partial: 'message', collection: @messages
   .main-contents__footer
-    %input.message{name: "message", placeholder: "type a message", type: "text"}/
-    %label.chat-file{for: "message_image"}
-      %input#message_image.image{name: "message[image]", type: "file"}/
-      %i.fa.fa-image
-    %input.submit{name: "commit", type: "submit", value: "Send"}/
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'message', placeholder: 'type a message'
+        = f.label :image, class: '#message_image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit'
