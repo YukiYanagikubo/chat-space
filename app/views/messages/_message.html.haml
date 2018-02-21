@@ -1,7 +1,9 @@
 .main-contents__body__list__message
   .main-contents__body__list__message__name
-    name
+    = message.user.name
   .main-contents__body__list__message__data
-    data
+    = format_posted_time(message.created_at)
   .main-contents__body__list__message__body
-    message
+    - if message.content.present?
+      = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
