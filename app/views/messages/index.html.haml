@@ -1,16 +1,5 @@
 / = render partial: "headMessage"
-.left-contents
-  .left-contents__user
-    .left-contents__user__name
-      = current_user.name
-    .left-contents__user__bt1
-      = link_to edit_user_path(current_user) do
-        %i.fa.fa-cog
-    .left-contents__user__bt2
-      = link_to new_group_path do
-        %i.fa.fa-pencil-square-o
-  .left-contents__groups
-    = render partial: "group"
+= render partial: "shared/side_bar"
 .main-contents
   .main-contents__header
     .main-contents__header__group
