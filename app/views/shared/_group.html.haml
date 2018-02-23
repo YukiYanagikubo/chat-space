@@ -1,5 +1,5 @@
-.left-contents__groups__group
-  - current_user.groups.each do |group|
+- current_user.groups.each do |group|
+  .left-contents__groups__group
     = link_to group_messages_path(group) do
       .left-contents__groups__group__name
         = group.name
