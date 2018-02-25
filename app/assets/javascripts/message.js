@@ -21,6 +21,7 @@ $(function(){
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
+    e.stopPropagation();
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
@@ -35,7 +36,7 @@ $(function(){
       var html = buildHTML(data);
       $('.main-contents__body__list').append(html);
       $(".main-contents__body").animate({scrollTop:$('.main-contents__body__list')[0].scrollHeight});
-      $('.textbox').val('');
+      $('.new_message .message').val('');
     })
     .fail(function(){
       alert('error');
