@@ -20,7 +20,7 @@ RSpec.describe Message, type: :model do
       it 'is invalid without content and image' do
         message = build(:message, content: nil, image: nil)
         message.valid?
-        expect(message.errors[:content]).to include('を入力してください')
+        expect(message.errors[:messages]).to include('を入力してください')
       end
 
       it 'is invalid without group_id' do
