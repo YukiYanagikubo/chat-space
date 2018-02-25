@@ -39,6 +39,7 @@
     &__groups{
       background-color: #2f3e51;
       height: 85%;
+      overflow: auto;
         &__group{
           height: 80px;
           padding: 20px 20px 0 20px;
@@ -85,6 +86,7 @@
     }
     &__body{
       height: calc(85% - 90px);
+      overflow: auto;
         &__list{
           padding-top: 26px;
           padding-left: 40px;
