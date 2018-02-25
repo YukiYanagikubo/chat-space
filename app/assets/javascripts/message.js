@@ -1,16 +1,8 @@
 $(function(){
 
   function buildHTML(message){
-    if (message.is_content_present){
-      var content = `${message.content} `
-    }else{
-      var content = ''
-    }
-    if (message.is_image_present){
-      var image =`<img src='${message.image.url}'> `
-    }else{
-      var image = ''
-    }
+    var content = message.is_content_present ? `${message.content} ` : ''
+    var image = message.is_image_present ? `<img src='${message.image.url}'> ` : ''
 
     var html = `<div class = "main-contents__body__list__message">
                   <div class = "main-contents__body__list__message__name">
