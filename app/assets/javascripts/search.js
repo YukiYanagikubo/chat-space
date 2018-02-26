@@ -3,12 +3,12 @@ $(function() {
 var search_list = $("#user-search-result");
 
 function appendUserName(users) {
-   var html = `<div class="chat-group-user clearfix">
+  var html = `<div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${users.name}</p>
                 <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${users.id}" data-user-name="${users.name}">追加</a>
               </div>`
-    search_list.append(html);
-  }
+  search_list.append(html);
+}
 
 function appendNoUserName(users) {
   var html = `<p>
@@ -19,26 +19,28 @@ function appendNoUserName(users) {
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
-    $.ajax({
-      type: 'GET',
-      url: '/users',
-      data: { name: input },
-      dataType: 'json'
-    })
+    if(input!==""){
+      $.ajax({
+        type: 'GET',
+        url: '/users',
+        data: { name: input },
+        dataType: 'json'
+      })
 
-    .done(function(users) {
-      if (users.length !== 0) {
-        users.forEach(function(user){
-          appendUserName(user);
-        });
-      }
-      else {
-        appendNoUserName("一致する名前はありません");
-      }
-    })
-    .fail(function() {
-      alert('名前検索に失敗しました');
-    })
+      .done(function(users) {
+        if (users.length !== 0) {
+          users.forEach(function(user){
+            appendUserName(user);
+          });
+        }
+        else {
+          appendNoUserName("一致する名前はありません");
+        }
+      })
+      .fail(function() {
+        alert('名前検索に失敗しました');
+      })
+    }
   });
 
 var search_list_add = $("#chat-group-user-22");
