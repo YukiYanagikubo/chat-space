@@ -43,7 +43,7 @@ function appendNoUserName(users) {
     }
   });
 
-var search_list_add = $("#chat-group-user-22");
+var search_list_add = $("#chat-group-users");
 
 function appendUserNameAdd(user_name, user_id) {
    var html =`<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
@@ -61,7 +61,7 @@ function appendUserNameAdd(user_name, user_id) {
     $(this).parent().remove()
   });
 
-  $("#chat-group-user-22").on("click", ".js-remove-btn", function () {
+  $("#chat-group-users").on("click", ".js-remove-btn", function () {
     $(this).parent().remove()
   });
 
