@@ -26,7 +26,6 @@ function appendNoUserName(users) {
         data: { name: input },
         dataType: 'json'
       })
-
       .done(function(users) {
         if (users.length !== 0) {
           users.forEach(function(user){
@@ -58,11 +57,11 @@ function appendUserNameAdd(user_name, user_id) {
     var user_name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
     appendUserNameAdd(user_name, user_id);
-    $(this).parent().remove()
+    $(this).parent().remove();
   });
 
   $("#chat-group-users").on("click", ".js-remove-btn", function () {
-    $(this).parent().remove()
+    $(this).parent().remove();
   });
 
 });
