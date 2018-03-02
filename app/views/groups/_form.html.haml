@@ -23,8 +23,8 @@
       %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
       #chat-group-users
-        .chat-group-user.clearfix{ id: "chat-group-user-#{current_user.id}"}
-          %input{name: "chat_group[user_ids][]", type: "hidden", value: "current_user.id"}/
+        .chat-group-user.clearfix
+          %input{name: "chat_group[user_ids][]", type: "hidden", value: current_user.id}/
           %p.chat-group-user__name
             = current_user.name
   .chat-group-form__field.clearfix
